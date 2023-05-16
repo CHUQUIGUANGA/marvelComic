@@ -16,7 +16,10 @@ setCategories([...categories,'nuevo'])
     <div>App Marvel</div>
 
      {/*input */}
-    <AddCategory setCategories={setCategories}/>
+    <AddCategory 
+      setCategories={setCategories}
+    
+    />
 
      {/*listado de imgs */}
      <ol>
