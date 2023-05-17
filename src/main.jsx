@@ -5,7 +5,8 @@ import {App} from './App.jsx'
 import './App.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  //modo stricto solo en desarrollo , no en produccion
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode> 
 )

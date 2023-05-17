@@ -1,18 +1,20 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgb(135, 135, 135);
+
 }
 
 body {
   padding: 60px;
-  color: aliceblue;
+  color: rgb(203, 207, 173);
+
 }
 
 input {
-  background-color: white;
+  background-color: hsl(56, 64%, 55%);
   border-radius: 5px;
-  border: 1px solid rgb(97, 32, 158);
-  color: rgb(78, 72, 72);
+  border: 1px solid rgb(158, 59, 117);
+  box-shadow: 2px 2px 8px 0 rgb(209, 102, 221), 4px 4px 16px 0 #d66, 0px 0px 24px 2px rgb(221, 197, 102);
+  color: rgb(53, 48, 48);
   font-size: 1.2rem;
   outline: none;
   padding: 10px 15px;
@@ -39,8 +41,9 @@ h3 {
   align-content: center;
   align-items: center;
   background-color: white;
+  border: white 5px solid;
   border-radius: 10px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 7px 7px 12px 0 rgba(255, 255, 255, 0.3); 
   display: flex;
   flex-direction: column;
   height: 0%;  
@@ -51,14 +54,40 @@ h3 {
 }
 
 .card p {
-  background-color: white;
+  
+  background-color: rgb(240, 242, 243);
+  color: black;
   flex: 1;
   font-size: 1.5rem;
+  border-radius: 10px;
+  box-shadow: -1px -1px 6px 0 rgb(122, 221, 102), 4px 4px 16px 2px rgb(92, 162, 235);
   margin-top: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
   padding: 5px 20px 0px 20px;
   text-align: center;
 }
 
 .card img {
   width: 100%;
+}
+ /*codigo para background multicolor  */
+ body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  height: 200vh;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

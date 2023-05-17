@@ -2,7 +2,7 @@ import { useState } from "react";
 
  
 
-export const AddCategory = ({setCategories}) => {
+export const AddCategory = ({onNewCategory}) => {
 
     const [InputValue, setInputValu] = useState('');
     
@@ -17,18 +17,19 @@ export const AddCategory = ({setCategories}) => {
     //controlamos que no ingrese el enter o vacio hasta que sea mayor a dos caracteres
     if (InputValue.trim().length <= 1) return; 
 
-    setCategories(categories =>[InputValue, ...categories]);
+    
+    //setCategories(categories =>[InputValue, ...categories]);
 
     //controlamos para que borre despues del enter
     setInputValu('');
-
+    onNewCategory(InputValue);
    }
 
   return (
  //controlar el enter mediante el submit
     <form onSubmit={ onSubmit}>
          <input type="text"
-          placeholder="imgs"
+          placeholder="Busca imgs"
           value={InputValue}
           onChange={onInputChange}
 

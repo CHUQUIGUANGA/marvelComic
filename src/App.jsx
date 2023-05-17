@@ -1,36 +1,39 @@
 import { useState } from "react"
 import { AddCategory } from "./components/AddCategory";
+import { MarvelGrid } from "./components/MarvelGrid";
 
 
 export const App = () => {
-  const [categories, setCategories] = useState(['spider-man','batman']);
+  // const [categories, setCategories] = useState(['spider-man']);
+  const [categories, setCategories] = useState('hulk');
+const onAddCategory = (newCategory) =>{
+  //validamos si encuentra algun duplicado sino sale, incluso podemos ser mas estrictos 
+  //if(categories.includes(newCategory)) return; 
 
-const onAddCategory = () =>{
-
-setCategories([...categories,'nuevo'])
+  //setCategories([newCategory,...categories])
+  setCategories(newCategory);
 } 
 
   return (
     <>
-    {/*titulo */}
-    <div>App Marvel</div>
+  
+    <div className="row text-center mb-3">
+      <h1>MARVEL IMGS</h1>
+    </div>
 
-     {/*input */}
+     {/*input entrada de datos*/}
     <AddCategory 
-      setCategories={setCategories}
-    
+       onNewCategory = {(value)=>onAddCategory(value)}
     />
 
-     {/*listado de imgs */}
-     <ol>
-      <button onClick={onAddCategory}>Agregar</button>
       {/*map recorre el arreglo o array */}
-      {categories.map( category => {
-        return <li key={category}>{category}</li>
-      })} 
+      {
+          //categories.map( (category) => (
+          //<MarvelGrid key={category} category={category}/>
+          //))
+          <MarvelGrid category={ categories}/>
+      } 
     
-     </ol>
-         {/*item marvel */}
     </>
   )
 }
